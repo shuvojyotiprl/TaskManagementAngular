@@ -1,0 +1,24 @@
+  <app-header/>
+  <main>
+    <ul >
+      @for (user of users; track $index) {
+         <li id="users">
+        <app-user [user]="user" 
+         (select)="onUserSelected($event)"
+         [selected]="user.id === selectedUser.id">
+        </app-user>
+      </li>
+      }
+    </ul>
+      @if (selectedUser) {
+        <app-tasks [id]="selectedUser.id" 
+        [name]="selectedUser.name"></app-tasks>
+      }
+      @else {
+       <p id="fallback">Please select a user to view their tasks.</p> 
+      }
+    
+  </main>
+ <footer>
+    <p>© 2024 EasyTrack. All rights reserved.</p>
+ </footer>
