@@ -3,14 +3,14 @@ import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { dummyTasks } from '../dummy-tasks';
 import { NewTaskData } from './new-task/new-task.model';
-import { DatePipe } from '@angular/common';
+
 
 
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [TaskComponent, NewTaskComponent,DatePipe],
+  imports: [TaskComponent, NewTaskComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
 })
